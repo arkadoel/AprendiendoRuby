@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 
 '''
 tambien comentario de varias lineas
@@ -29,7 +30,11 @@ def pedirNumeros()
     #como son variables globales ya esta
 end
 
-if __FILE__ == $0
+def bucles()
+
+end
+
+def main()
     seguir = true
 
     while(seguir)
@@ -38,11 +43,33 @@ if __FILE__ == $0
         if(opcion == 1)
             pedirNumeros()
         elsif (opcion==2)
-			print (sumarNumeros())
+            print (sumarNumeros())
+        elsif (opcion == 3)
+            bucles()
 		elsif (opcion==9)
 			seguir = false
 		else
             print ("Elige una opcion correcta")
         end
+
+        '''
+        $age =  5
+        case $age
+            when 0 .. 2
+                puts "baby"
+            when 3 .. 6
+                puts "little child"
+            when 7 .. 12
+                puts "child"
+            when 13 .. 18
+                puts "youth"
+            else
+                puts "adult"
+        end
+        '''
     end
+end
+
+if __FILE__ == $0
+    main()
 end
